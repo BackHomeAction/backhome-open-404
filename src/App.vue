@@ -33,7 +33,7 @@
       v-if="selectedOldMan"
       class="content"
     >
-      <Content />
+      <Content :data="selectedOldMan" />
     </div>
     <div
       v-if="oldManList && oldManList.length"
@@ -137,6 +137,6 @@ export default defineComponent({
 }
 
 .selector {
-  margin-top: 20px;
+  margin-top: 15px;
 }
 </style>
