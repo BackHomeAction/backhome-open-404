@@ -44,6 +44,8 @@
         :list="oldManList"
       />
     </div>
+
+    <Footer />
   </div>
 </template>
 
@@ -51,13 +53,14 @@
 import { defineComponent, ref, onMounted, computed } from 'vue'
 import Content from '@/components/Content.vue'
 import Selector from '@/components/Selector.vue'
+import Footer from '@/components/Footer.vue'
 import request from '@/utils/request'
 
 const oldManList = ref([])
 const selectedIndex = ref(0)
 
 export default defineComponent({
-  components: { Content, Selector },
+  components: { Content, Selector, Footer },
   setup () {
     onMounted(async () => {
       try {
