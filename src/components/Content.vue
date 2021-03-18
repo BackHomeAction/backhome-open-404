@@ -91,17 +91,19 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .content {
-  width: 700px;
-  min-height: 250px;
-  background: #FFFFFF;
-  border-radius: 25px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
-  padding: 30px;
+  width: 896px;
+  height: 386px;
+  background: url("../assets/images/box.png");
+  padding: 30px 30px 75px 30px;
   box-sizing: border-box;
   display: flex;
+  overflow: hidden;
 }
 
 .left {
+  display: flex;
+  align-items: center;
+
   .photo {
     width: 180px;
     height: 240px;
