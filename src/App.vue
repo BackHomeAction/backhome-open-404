@@ -54,7 +54,7 @@ import Selector from '@/components/Selector.vue'
 import request from '@/utils/request'
 
 const oldManList = ref([])
-const selectedIndex = ref(2)
+const selectedIndex = ref(0)
 
 export default defineComponent({
   components: { Content, Selector },
@@ -68,7 +68,7 @@ export default defineComponent({
           }
         }).json()
         oldManList.value = res.data
-        selectedIndex.value = Math.round(res.data.length / 2)
+        selectedIndex.value = Math.floor(res.data.length / 2)
         console.log(res)
       } catch (e) {
         console.log(e)
