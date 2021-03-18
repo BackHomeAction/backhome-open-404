@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "DFWaWaW5";
+    src: url("DFWaWaW5.eot"); /* IE9 */
+    src: url("DFWaWaW5.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("DFWaWaW5.woff") format("woff"), /* chrome、firefox */
+    url("DFWaWaW5.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("DFWaWaW5.svg#DFWaWaW5") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
