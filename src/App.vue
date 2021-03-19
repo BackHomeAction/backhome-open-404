@@ -142,4 +142,25 @@ export default defineComponent({
 .selector {
   margin-top: 15px;
 }
+
+@media screen and (max-width: 1600px) {
+  .background {
+    .top {
+      background-size: auto 10vh;
+      height: calc(10vh - 1px);
+    }
+  }
+
+  .header {
+    margin-top: 14vh;
+  }
+
+  .content {
+    margin-top: 8px;
+  }
+
+  .selector {
+    margin-top: 10px;
+  }
+}
 </style>

@@ -13,9 +13,11 @@
   justify-content: center;
   font-size: 14px;
   color: #666666;
+}
 
-  &__item {
-
+@media screen and (max-width: 1600px) {
+  .footer {
+    margin-top: 40px;
   }
 }
 </style>

@@ -94,6 +94,7 @@ export default defineComponent({
   width: 896px;
   height: 386px;
   background: url("../assets/images/box.png");
+  background-size: contain;
   padding: 30px 30px 75px 30px;
   box-sizing: border-box;
   display: flex;
@@ -131,6 +132,41 @@ export default defineComponent({
       font-weight: 500;
       color: #000000;
       line-height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .content {
+    width: 672px;
+    height: 289.5px;
+    padding: 30px 30px 75px 30px;
+  }
+
+  .left {
+    .photo {
+      width: 135px;
+      height: 180px;
+      border-radius: 15px;
+    }
+  }
+
+  .right {
+    margin-left: 40px;
+    padding: 10px 0;
+
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      color: #555555;
+      line-height: 20px;
+
+      &__name {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
+        line-height: 24px;
+      }
     }
   }
 }
