@@ -84,4 +84,20 @@ export default defineComponent({
     }
   }
 }
+
+@media screen and (max-width: 767.99px) {
+  .selector {
+    width: 85vw;
+  }
+
+  .item {
+    width: 64px;
+    height: 64px;
+
+    &__image {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
 </style>

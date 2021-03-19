@@ -5,18 +5,12 @@
     </div>
     <div class="header">
       <div
-        class="text"
+        class="text text---right"
       >
-        <div
-          class="text__row"
-          style="font-size: 68px; text-align: right; font-weight: bold"
-        >
+        <div class="text__row text__title">
           Oops! 404
         </div>
-        <div
-          class="text__row"
-          style="font-size: 40px; text-align: right;"
-        >
+        <div class="text__row">
           Not Found…
         </div>
       </div>
@@ -55,6 +49,7 @@ import Content from '@/components/Content.vue'
 import Selector from '@/components/Selector.vue'
 import Footer from '@/components/Footer.vue'
 import request from '@/utils/request'
+import { enquireScreen } from 'enquire-js'
 
 const oldManList = ref([])
 const selectedIndex = ref(0)
@@ -76,6 +71,16 @@ export default defineComponent({
       } catch (e) {
         console.log(e)
       }
+
+      // check if mobile
+      enquireScreen((bool: boolean) => {
+        if (bool) {
+          if (oldManList.value.length === 5) {
+            oldManList.value = oldManList.value.slice(1, 4)
+            selectedIndex.value = Math.floor(oldManList.value.length / 2)
+          }
+        }
+      }, 'only screen and (max-width: 767.99px)')
     })
 
     const selectedOldMan = computed(() => {
@@ -132,6 +137,15 @@ export default defineComponent({
     font-size: 40px;
     line-height: 60px;
     font-weight: normal;
+
+    &--right {
+      text-align: right;
+    }
+
+    &__title {
+      font-size: 68px;
+      font-weight: bold;
+    }
   }
 }
 
@@ -153,6 +167,40 @@ export default defineComponent({
 
   .header {
     margin-top: 14vh;
+  }
+
+  .content {
+    margin-top: 8px;
+  }
+
+  .selector {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .background {
+    height: 50vh;
+    clip-path: circle(250vw at 50vw -180vw);
+
+    .top {
+      background-size: auto 6vh;
+      height: calc(6vh - 1px);
+    }
+  }
+
+  .header {
+    width: 90vw;
+    margin-top: 10vh;
+
+    .text {
+      font-size: 4.5vw;
+      line-height: 27px;
+
+      &__title {
+        font-size: 6vw;
+      }
+    }
   }
 
   .content {

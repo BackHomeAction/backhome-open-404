@@ -3,7 +3,7 @@
     <div class="left">
       <img
         :src="data.oldMan.identificationPhoto"
-        class="photo"
+        class="left photo"
       >
     </div>
     <div class="right">
@@ -154,6 +154,49 @@ export default defineComponent({
   .right {
     margin-left: 40px;
     padding: 10px 0;
+
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      color: #555555;
+      line-height: 20px;
+
+      &__name {
+        font-size: 16px;
+        font-weight: 500;
+        color: #000000;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .content {
+    background: url("../assets/images/box-mobile.png");
+    background-size: contain;
+    width: 85vw;
+    height: 135.49vw;
+    padding: 20px 20px 35px 20px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+
+    .photo {
+      width: 135px;
+      height: 180px;
+      border-radius: 15px;
+    }
+  }
+
+  .right {
+    margin-left: 0;
+    padding: 10px 0;
+    text-align: center;
 
     .text {
       font-size: 14px;
