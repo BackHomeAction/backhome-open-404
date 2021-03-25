@@ -13,6 +13,12 @@
         <div class="text__row">
           Not Found…
         </div>
+        <div
+          class="text__row text__back"
+          @click="handleBack"
+        >
+          返回上一页
+        </div>
       </div>
       <div class="text">
         <div class="text__row">
@@ -54,6 +60,10 @@ import { enquireScreen } from 'enquire-js'
 const oldManList = ref([])
 const selectedIndex = ref(0)
 
+const handleBack = () => {
+  window.parent.postMessage('back', '*')
+}
+
 export default defineComponent({
   components: { Content, Selector, Footer },
   setup () {
@@ -87,7 +97,7 @@ export default defineComponent({
       return oldManList.value[selectedIndex.value]
     })
 
-    return { oldManList, selectedIndex, selectedOldMan }
+    return { oldManList, selectedIndex, selectedOldMan, handleBack }
   }
 })
 </script>
@@ -145,6 +155,14 @@ export default defineComponent({
     &__title {
       font-size: 68px;
       font-weight: bold;
+    }
+
+    &__back {
+      font-family: sans-serif;
+      cursor: pointer;
+      text-decoration: underline;
+      font-size: 1vw;
+      line-height: 25px;
     }
   }
 }
