@@ -161,8 +161,8 @@ export default defineComponent({
       font-family: sans-serif;
       cursor: pointer;
       text-decoration: underline;
-      font-size: 1vw;
-      line-height: 25px;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 }
@@ -217,6 +217,11 @@ export default defineComponent({
 
       &__title {
         font-size: 6vw;
+      }
+
+      &__back {
+        font-size: 4vw;
+        line-height: 6vw;
       }
     }
   }
